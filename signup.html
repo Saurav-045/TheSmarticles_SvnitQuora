@@ -6,22 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <link rel="stylesheet" href="template/signup.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script>
+        //Firebase
+var firebaseConfig = {
+    apiKey: "AIzaSyAOTzNf64XSKtXaXXCmD4TniFDPftZyxhU",
+    authDomain: "contactform-96e6e.firebaseapp.com",
+    projectId: "contactform-96e6e",
+    storageBucket: "contactform-96e6e.appspot.com",
+    messagingSenderId: "120990161287",
+    appId: "1:120990161287:web:078d3b93ca3e66fd98db22",
+    measurementId: "G-Y58C530GJZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
     </script>
+    <script src="signup.js"></script>
 </head>
 <body>
     <div class="login-box">
         <h1>Sign Up</h1>
         <div class="textbox">
-            <form id="contactForm"> 
-            <input id="name" type="name" placeholder="Username" name="" value="" required>
+            <form id="contactForm" onsubmit="return submitForm()"> 
+            <input id="name" type="name" placeholder="Username" name="name" required>
             <br/><br/>
-            <input id="email" type="email" placeholder="Email Id" name="" value="" required>
+            <input id="email" type="email" placeholder="Email Id" name="email" required>
             <br/><br/>
-            <input id="password" type="password" placeholder="password" name="" value="" required>
+            <input id="password" type="password" placeholder="password" name="password"required>
             <br/><br/>
-        <input class="btn" type="button" name ="" value="Sign Up">
+        <input class="btn" type="submit" name ="" value="Sign Up">
         <br/>
     </form>
         </div>
